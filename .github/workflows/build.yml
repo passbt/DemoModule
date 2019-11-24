@@ -1,0 +1,14 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-2016
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: Invoke-Pest
+      shell: pwsh
